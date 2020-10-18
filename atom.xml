@@ -6,7 +6,7 @@
   <link href="https://grit0821.github.io/Blog/atom.xml" rel="self"/>
   
   <link href="https://grit0821.github.io/Blog/"/>
-  <updated>2020-10-18T16:37:25.609Z</updated>
+  <updated>2020-02-17T07:25:42.000Z</updated>
   <id>https://grit0821.github.io/Blog/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="https://grit0821.github.io/Blog/2020/10/18/test/"/>
-    <id>https://grit0821.github.io/Blog/2020/10/18/test/</id>
-    <published>2020-10-18T14:34:11.000Z</published>
-    <updated>2020-10-18T16:37:25.609Z</updated>
-    
-    <content type="html"><![CDATA[<p>Test1</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Test1&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>mvvm原理</title>
@@ -560,6 +539,30 @@ vue 是常见的 mvvm 框架，实现数据，视图双向绑定的原理主要�
     
     
     <category term="npm/Yarn使用" scheme="https://grit0821.github.io/Blog/tags/npm-Yarn%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo博客使用与写作</title>
+    <link href="https://grit0821.github.io/Blog/2020/01/08/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E4%B8%8E%E5%86%99%E4%BD%9C/"/>
+    <id>https://grit0821.github.io/Blog/2020/01/08/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E4%B8%8E%E5%86%99%E4%BD%9C/</id>
+    <published>2020-01-08T13:31:17.000Z</published>
+    <updated>2020-03-04T04:46:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">powershell</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">"title"</span></span><br></pre></td></tr></table></figure></div><p>创建一个 title.md 文件，在博客目录 source/_posts 下</p><h1 id="设置Front-matter"><a href="#设置Front-matter" class="headerlink" title="设置Front-matter"></a>设置Front-matter</h1><p>Front-matter 是文件最上方以 <code>---</code>分隔的区域，用于指定此文件的变量</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">markdown</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: web性能优化</span><br><span class="line">date: 2019-12-02 21:43:18</span><br><span class="line">categories: </span><br><span class="line"><span class="bullet">- </span>面试</span><br><span class="line"><span class="bullet">- </span>web性能优化</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">- </span>前端</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div><p>表示分类为面试/web性能优化</p><table><thead><tr><th align="center">参数</th><th align="center">描述</th></tr></thead><tbody><tr><td align="center">title</td><td align="center">标题</td></tr><tr><td align="center">date</td><td align="center">建立日期</td></tr><tr><td align="center">updated</td><td align="center">更新日期</td></tr><tr><td align="center">tags</td><td align="center">标签，没有顺序和层次性</td></tr><tr><td align="center">categories</td><td align="center">分类，有顺序和层次性，前面为父类，后面为子类</td></tr></tbody></table><h1 id="写作规范"><a href="#写作规范" class="headerlink" title="写作规范"></a>写作规范</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用各级标题时，注意该部分内容结束后需要换行</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">markdown</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line">内容</span><br><span class="line"></span><br><span class="line"><span class="section">## 二级标题1</span></span><br><span class="line">内容</span><br><span class="line"></span><br><span class="line"><span class="section">## 二级标题2</span></span><br><span class="line">内容</span><br></pre></td></tr></table></figure></div><p>博客会对各级标题进行自动分类展示在侧边，最好按级别使用各级标题，不要跳跃使用，标题前面也不要加数字说明</p><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>可以使用 Markdown 格式的图片引用<code>![img](url)</code></p><p>推荐使用 hexo 博客的格式，可以指定图片的大小<code>&lt;img src=&quot;url&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;</code></p><p>使用 <code>&lt;img&gt;</code> 引用图片请求可能得到 403 错误，需要在 Markdown 文档的 Front-matter 结束后添加一行<code>&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;</code>,此解决方案已经加入到了模板设置中，使用<code>hexo new</code>创建博客时不需要再额外设置了。</p><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>使用代码块需要在前面写明类型，比如 powershell , javascript ,这样代码有高亮显示，易读性好</p><h2 id="内容高亮"><a href="#内容高亮" class="headerlink" title="内容高亮"></a>内容高亮</h2><p>hexo 博客中的 Markdown 不支持高亮显示，和有道云笔记有些不一样。</p><h1 id="预览和部署"><a href="#预览和部署" class="headerlink" title="预览和部署"></a>预览和部署</h1><h2 id="处理静态文件"><a href="#处理静态文件" class="headerlink" title="处理静态文件"></a>处理静态文件</h2><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">powershell</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></div><p>生成静态文件，每次更新 markdown 源文件都需要执行此命令重新生成静态文件</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">powershell</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo a</span><br></pre></td></tr></table></figure></div><p>在博客内开启了Algolia搜索，每次添加，删除博客后执行此命令生成新的检索索引</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">powershell</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></div><p>删除静态文件</p><h2 id="利用jsdelivr访问github图片作为图床"><a href="#利用jsdelivr访问github图片作为图床" class="headerlink" title="利用jsdelivr访问github图片作为图床"></a>利用jsdelivr访问github图片作为图床</h2><p>将github作为图床上传图片，国内访问速度太慢，通过jsdelivr使用CDN访问加速</p><p>每更新一次github仓库，就执行Draft a new release，记录版本号，</p><p>使用<code>https://cdn.jsdelivr.net/gh/Grit0821/Blogbed@1.1/index_img.jpg</code>引用Blogbed仓库下的index_img.jpg，‘@’后面跟release的版本号</p><h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">powershell</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></div><p>本地服务器预览 </p><h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">powershell</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;创建博客&quot;&gt;&lt;a href=&quot;#创建博客&quot; class=&quot;headerlink&quot; title=&quot;创建博客&quot;&gt;&lt;/a&gt;创建博客&lt;/h1&gt;&lt;div class=&quot;code-area-wrap&quot;&gt;&lt;div class=&quot;highlight-tools&quot;&gt;&lt;i class</summary>
+      
+    
+    
+    
+    <category term="工具使用" scheme="https://grit0821.github.io/Blog/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="写作规范" scheme="https://grit0821.github.io/Blog/tags/%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83/"/>
     
   </entry>
   
