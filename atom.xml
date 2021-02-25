@@ -6,7 +6,7 @@
   <link href="https://grit0821.github.io/Blog/atom.xml" rel="self"/>
   
   <link href="https://grit0821.github.io/Blog/"/>
-  <updated>2021-02-25T03:09:47.816Z</updated>
+  <updated>2020-10-29T08:21:35.511Z</updated>
   <id>https://grit0821.github.io/Blog/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>searchtest</title>
-    <link href="https://grit0821.github.io/Blog/2021/02/25/searchtest/"/>
-    <id>https://grit0821.github.io/Blog/2021/02/25/searchtest/</id>
-    <published>2021-02-25T03:09:07.000Z</published>
-    <updated>2021-02-25T03:09:47.816Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="search-test"><a href="#search-test" class="headerlink" title="search test"></a>search test</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;search-test&quot;&gt;&lt;a href=&quot;#search-test&quot; class=&quot;headerlink&quot; title=&quot;search test&quot;&gt;&lt;/a&gt;search test&lt;/h2&gt;</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>setState 四种同步更新 this.state 方式</title>
@@ -550,6 +530,31 @@ vue 是常见的 mvvm 框架，实现数据，视图双向绑定的原理主要�
     <category term="工具使用" scheme="https://grit0821.github.io/Blog/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
     
     <category term="webpack" scheme="https://grit0821.github.io/Blog/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/webpack/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CommonJS规范和ES6模块规范</title>
+    <link href="https://grit0821.github.io/Blog/2020/01/21/CommonJS%E8%A7%84%E8%8C%83%E5%92%8CES6%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83/"/>
+    <id>https://grit0821.github.io/Blog/2020/01/21/CommonJS%E8%A7%84%E8%8C%83%E5%92%8CES6%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83/</id>
+    <published>2020-01-21T08:36:36.000Z</published>
+    <updated>2020-02-05T16:26:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer">-<h1 id="CommonJS规范"><a href="#CommonJS规范" class="headerlink" title="CommonJS规范"></a>CommonJS规范</h1><p>Node 应用由模块组成，采用 CommonJS 规范</p><p>导出模块采用<code>module.exports</code>,<code>module.exports</code>是一个对象，也是导出的接口</p><p>导入模块采用<code>require</code>引入这个对象</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// example.js</span></span><br><span class="line"><span class="keyword">let</span> x = <span class="number">5</span></span><br><span class="line"><span class="keyword">var</span> add3 = <span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">3</span> + value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><h2 id="导出和引入-example-js-中的模块"><a href="#导出和引入-example-js-中的模块" class="headerlink" title="导出和引入 example.js 中的模块"></a>导出和引入 example.js 中的模块</h2><p>挂载 module.exports 对象上导出和引入</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 导出1,分别导出</span></span><br><span class="line"><span class="built_in">module</span>.exports.x = x</span><br><span class="line"><span class="built_in">module</span>.exports.add3 = add3</span><br><span class="line"><span class="comment">// 导出2，对象解构赋值</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;x, add3&#125;</span><br><span class="line"><span class="comment">// 引入1，解构赋值</span></span><br><span class="line"><span class="keyword">let</span> &#123;x,add3&#125; = <span class="built_in">require</span>(<span class="string">'./example.js'</span>)</span><br><span class="line"><span class="comment">// 引入2，整个对象</span></span><br><span class="line"><span class="keyword">let</span> example = <span class="built_in">require</span>(<span class="string">'./example.js'</span>)</span><br><span class="line">example.add3(<span class="number">5</span>)</span><br></pre></td></tr></table></figure></div><p>只导出一个目标时，不使用对象形式</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 导出</span></span><br><span class="line">moduel.exports = add3</span><br><span class="line"><span class="comment">// 引入</span></span><br><span class="line"><span class="keyword">let</span> add3 = <span class="built_in">require</span>(<span class="string">'./example.js'</span>)</span><br></pre></td></tr></table></figure></div><h1 id="ES6模块规范"><a href="#ES6模块规范" class="headerlink" title="ES6模块规范"></a>ES6模块规范</h1><p><code>export</code>命令用于规定模块的对外接口，<code>import</code>命令用于引入其他模块提供的功能。</p><h2 id="导出和引入-example-js-中的模块-1"><a href="#导出和引入-example-js-中的模块-1" class="headerlink" title="导出和引入 example.js 中的模块"></a>导出和引入 example.js 中的模块</h2><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// example.js</span></span><br><span class="line"><span class="keyword">let</span> x = <span class="number">5</span></span><br><span class="line"><span class="keyword">var</span> add3 = <span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">3</span> + value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 导出</span></span><br><span class="line"><span class="keyword">export</span> &#123;x, add3&#125;</span><br><span class="line"><span class="comment">// 引入1,对象解构赋值</span></span><br><span class="line"><span class="keyword">import</span> &#123;x, add3&#125; <span class="keyword">from</span> <span class="string">'./example.js'</span></span><br><span class="line"><span class="comment">// 引入2，使用 * 指定一个对象，所有输出值都加载到这个对象上</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> example <span class="keyword">from</span> <span class="string">'./example.js'</span></span><br><span class="line">example.add3(<span class="number">5</span>)</span><br></pre></td></tr></table></figure></div><p>只导出一个目标时使用 export default</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 导出 </span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> add3</span><br><span class="line"><span class="comment">// 引入</span></span><br><span class="line"><span class="keyword">import</span> add3 <span class="keyword">from</span> <span class="string">'./example.js'</span></span><br></pre></td></tr></table></figure></div><h2 id="浏览器加载-ES6-模块"><a href="#浏览器加载-ES6-模块" class="headerlink" title="浏览器加载 ES6 模块"></a>浏览器加载 ES6 模块</h2><p>浏览器加载 ES6 模块，也使用<code>&lt;script&gt;</code>标签，但是要加入<code>type=&quot;module&quot;</code>属性</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">html</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"module"</span> <span class="attr">src</span>=<span class="string">"./test.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></div><p>上面代码在网页中插入一个模块<code>test.js</code>，由于 type 属性设置为 module，所以浏览器知道这是一个 ES6 模块</p><p>浏览器对于<code>type=module</code>的<code>&lt;script&gt;</code>，都是异步加载，相当于设置了<code>defer</code>属性，延迟脚本会等到整个页面渲染完再执行模块脚本，避免浏览器阻塞。</p><p>如果页面有多个<code>&lt;script type=&quot;module&quot;&gt;</code>，它们会按照在页面的顺序依次执行</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+-
+
+&lt;h1 id=&quot;CommonJS规范&quot;&gt;&lt;a href=&quot;#CommonJS规范&quot; class=&quot;headerlink&quot; title=&quot;CommonJS规范&quot;&gt;&lt;/a&gt;CommonJS</summary>
+      
+    
+    
+    
+    <category term="基础知识" scheme="https://grit0821.github.io/Blog/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
     
   </entry>
