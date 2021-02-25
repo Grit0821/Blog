@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>searchtest</title>
+    <url>/Blog/2021/02/25/searchtest/</url>
+    <content><![CDATA[<h2 id="search-test"><a href="#search-test" class="headerlink" title="search test"></a>search test</h2>]]></content>
+  </entry>
+  <entry>
     <title>setState 四种同步更新 this.state 方式</title>
     <url>/Blog/2020/10/29/setState-%E5%9B%9B%E7%A7%8D%E5%90%8C%E6%AD%A5%E6%9B%B4%E6%96%B0-this-state-%E6%96%B9%E5%BC%8F/</url>
     <content><![CDATA[<h2 id="setState-四种同步更新-this-state-方式"><a href="#setState-四种同步更新-this-state-方式" class="headerlink" title="setState 四种同步更新 this.state 方式"></a>setState 四种同步更新 this.state 方式</h2><p>在React中，<strong>如果是由React引发的事件处理（比如通过onClick引发的事件处理），调用setState不会同步更新this.state，而是会合并多个setState进行异步更新，这样可以避免频繁更新DOM，提升性能</strong></p>
