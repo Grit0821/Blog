@@ -739,7 +739,7 @@ vue 是常见的 mvvm 框架，实现数据，视图双向绑定的原理主要�
     <title>npm包管理工具</title>
     <url>/Blog/2020/01/09/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
--
+
 
 <h1 id="npm-介绍"><a href="#npm-介绍" class="headerlink" title="npm 介绍"></a>npm 介绍</h1><h2 id="什么是-npm"><a href="#什么是-npm" class="headerlink" title="什么是 npm"></a>什么是 npm</h2><p>npm 全称 Node Package Manager，是使用 Node.js 写的包管理工具，可以让 JavaScript 开发者分享，复用代码更加方便：</p>
 <p>在程序开发中我们常常需要依赖别人提供的框架，写 js 也不例外。这些可以重复的框架代码被称作包（package）或者模块（module），一个包可以是一个文件夹里放着几个文件，同时有一个叫做 package.json 的文件。</p>
@@ -789,7 +789,7 @@ vue 是常见的 mvvm 框架，实现数据，视图双向绑定的原理主要�
 
 <h3 id="npx"><a href="#npx" class="headerlink" title="npx"></a>npx</h3><p>主要解决调用项目内部安装模块问题，以安装 babel-cli 后调用 babel 为例</p>
 <p>一般调用要修改 package.json 的 scripts 字段</p>
-<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">json</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"build"</span>: <span class="string">"babel src -d lib"</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">json</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"build"</span>: <span class="string">"babel src -d lib"</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 <p>然后执行</p>
 <div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">powershell</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure></div>
 
